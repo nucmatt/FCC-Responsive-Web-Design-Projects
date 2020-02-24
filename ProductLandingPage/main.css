@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
+body {
+	background-color: #F2F2F2;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: medium;
+	margin: 0;
+	color: #420c07;
+}
+
+#pagewrapper {
+	position: relative;
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+	background-image: url("https://i.pinimg.com/originals/df/c4/c1/dfc4c1e6442a1924972cb011cb70f984.jpg");
+	background-position: bottom;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+header, footer {
+	background-color: #808080;
+	background-image: url("https://wallpapercave.com/wp/QHHd51c.jpg");
+	width: 100%;
+	color: white;
+	min-height: 75px;
+}
+
+header {
+	position: sticky;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	top: 0;
+}
+
+header p {
+	font-family: Monoton, cursive;
+	font-style: italic;
+	font-size: 150%;
+}
+
+
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 40vw;
+}
+
+li {
+	list-style: none;
+}
+
+#why {
+	margin-top: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 1em;
+}
+
+section div {
+	margin: 0.5em;
+	padding: .5em;
+	text-align: center;
+}
+
+#qualities, #products {
+	min-width: 300px;
+	width: calc(90% / 2);
+}
+
+#qualities i {
+	padding-right: .5em;
+}
+
+#products div {
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 0;
+}
+
+h2 {
+	border-bottom: 1px solid black;
+	margin-top: 0;
+	padding: .3em;
+}
+
+#products li {
+	list-style-type: circle;
+	text-align: left;
+	padding: .2em 0 .2em 1%;
+}
+
+.btn {
+	margin: 0 1em 1em 1em;
+	padding: .2em 1em;
+	background-color: #420c07;
+	border: 1px solid black;
+	color: white;
+	font-weight: bold;
+	font-size: 110%;
+	cursor: pointer;
+}
+
+button:hover {
+	text-decoration: underline;
+	border: 1px outset white;
+}
+
+#help {
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 1em;
+}
+
+input, textarea {
+	margin-top: .5em;
+	padding: .5em;
+}
+
+
+input[type="email"], textarea {
+	max-width: 300px;
+	width: 100%;
+	margin: .5em;
+}
+
+textarea {
+	height: 5em;
+}
+
+#submit {
+	padding: .2em .3em;
+	background-color: #420c07;
+	border: 1px solid black;
+	color: white;
+	font-weight: bold;
+	font-size: 105%;
+	cursor: pointer;
+}
+
+#submit:hover {
+	text-decoration: underline;
+	border: 1px outset white;
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer ul {
+	display: flex;
+	flex-direction: row;
+	top: .1em;
+}
+
+footer li {
+	padding: 0 .5em;
+}
+
+#copyright {
+	font-size: 50%;	
+	width: 30%;
+	
+}
+
+@media (max-width: 560px) {
+	header {
+		display: flex;
+		flex-direction: column;
+	}
+	
+	header p {
+		margin: 0;
+	}
+	
+	nav ul {
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding-top: .5em;
+	}
+	
+	li {
+		padding-bottom: .5em;
+	}
+	
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+

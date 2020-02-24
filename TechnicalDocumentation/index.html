@@ -1,0 +1,554 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	
+	<title>FCC Technical Documentation project</title>
+	
+	<link href="main.css" type="text/css" rel="stylesheet">
+	
+</head>
+
+<body>
+
+<nav id="navbar">
+	<header>HTML Tables</header>
+	
+	<ul>
+		<a class="nav-link" href="#Introduction" rel="internal">
+		 <li>Introduction</li></a>
+		 
+		<a class="nav-link" href="#Building_a_HTML_Table" rel="internal">
+		 <li>Building a HTML Table</li></a>
+		 
+		<a class="nav-link" href="#Table_Cells" rel="internal">
+		 <li>Table Cells</li></a>
+		 
+		<a class="nav-link" href="#Add_Structure_to_a_HTML_Table" rel="internal">
+		 <li>Add Structure to a HTML Table</li></a>
+		 
+		<a class="nav-link" href="#Caption_and_Comment_a_HTML_Table" rel="internal">
+		 <li>Caption and Comment a HTML Table</li></a>
+		 
+		<a class="nav-link" href="#Styling_a_HTML_Table" rel="internal">
+		 <li>Styling a HTML Table</li></a>
+		 
+		<a class="nav-link" href="#HTML_Tables_vs_CSS_Tables" rel="internal">
+		 <li>HTML Tables vs CSS Tables</li></a>
+		 
+		<a class="nav-link" href="#References" rel="internal">
+		 <li>References</li></a>
+	</ul>
+</nav>
+
+<main id="main-doc">
+	<section id="Introduction" class="main-section">
+		<header>Introduction</header>		
+			<p>As we have learned, HTML contains the content of your web page and is used to describe the structure of this content.
+			Some of your content may well be complex data sets that you would like your users to see. Making sense of complex data
+			is aided by presenting it in a logical, hierarchical structure. This is where HTML tables come in. HTML tables give you a way 
+			to present your complex data in tabular form. These tables can contain not only your data but also headers, footers, captions, 
+			and even comments to help your users understand the data you are presenting.</p>
+	</section>
+	
+	<section class="main-section" id="Building_a_HTML_Table">
+		<header>Building a HTML Table</header>		
+			<p>To build an HTML table we should first understand the basic structure of any good table. In essence every good table is a grid
+			made up of columns and rows. The intersetion of a column and a row is known as a table cell. Each table cell contains a piece
+			of data the table is presenting. With proper headings, a summation of the data presented, and clarifying comments added
+			where necessary even complex data can becomes readily understandable.</p>
+			
+			<p>Knowing the basic structure of any good table we can now see how to construct a basic table in HTML. HTML tables are 
+			constructed by nesting a variety of elements between <code>table</code> tags. HTML organizes tables into rows (vice columns)
+			using the table row <code>tr</code> element. Each table row is made up of one or more table data <code>td</code> elements.
+			Columns are formed automatically by aligning table data elements in subsequent table rows vertically. In general, the first
+			row of the table is made up of table heading <code>th</code> elements to organize and give meaning to the subsequent rows of 
+			data. Table heading text is bold by default. You can override this and apply your own styling using CSS.</p>
+			
+			<p>To summarize, every HTML table is made up of four essential elements. These are:</p>
+			
+			<ul>
+				<li><code>table</code> tags - These contain all the elements that make an HTML table.</li>
+				<li><code>tr</code> - HTML tables are organized into rows using table row elements.</li>
+				<li><code>td</code> - Each piece of table data is contained within table data elements.</li>
+				<li><code>th</code> - The first table row is made up of table headings to give meaning to the table data.</li>
+			</ul>
+			
+			<p>Putting these elements to use we can now create a simple table:</p>
+<pre>
+<code class="example">
+&lttable&gt
+ &lttr&gt
+  &ltth&gtCMS&lt/th&gt
+  &ltth&gtUsage&lt/th&gt
+  &ltth&gtChange Since Jan 1&lt/th&gt
+  &ltth&gtMarket Share&lt/th&gt
+  &ltth&gtChange Since Jan 1&lt/th&gt
+ &lt/tr&gt			  
+ &lttr&gt
+  &lttd&gtWordPress&lt/td&gt
+  &lttd&gt25.8%&lt/td&gt
+  &lttd&gt+0.2%&lt/td&gt
+  &lttd&gt59.1%&lt/td&gt
+  &lttd&gt+0.3%&lt/td&gt
+ &lt/tr&gt			  
+ &lttr&gt
+  &lttd&gtJoomla&lt/td&gt
+  &lttd&gt2.8%&lt/td&gt
+  &lttd&gtNo Change&lt/td&gt
+  &lttd&gt6.4%&lt/td&gt
+  &lttd&gtNo Change&lt/td&gt
+ &lt/tr&gt			 
+ &lttr&gt
+  &lttd&gtDrupal&lt/td&gt
+  &lttd&gt2.2%&lt/td&gt
+  &lttd&gt+0.1%&lt/td&gt
+  &lttd&gt4.9%&lt/td&gt
+  &lttd&gtNo Change&lt/td&gt
+ &lt/tr&gt			 
+ &lttr&gt
+  &lttd&gtMagento&lt/td&gt
+  &lttd&gt1.3%&lt/td&gt
+  &lttd&gt+0.1%&lt/td&gt
+  &lttd&gt2.9%&lt/td&gt
+  &lttd&gtNo Change&lt/td&gt
+ &lt/tr&gt			
+ &lttr&gt
+  &lttd&gtBlogger&lt/td&gt
+  &lttd&gt1.2%&lt/td&gt
+  &lttd&gtNo Change&lt/td&gt
+  &lttd&gt2.7%&lt/td&gt
+  &lttd&gtNo Change&lt/td&gt
+ &lt/tr&gt			 
+ &lttr&gt
+  &lttd&gtTotals&lt/td&gt
+  &lttd&gt33.3%&lt/td&gt
+  &lttd&gt&lt/td&gt
+  &lttd&gt76%&lt/td&gt
+  &lttd&gt&lt/td&gt
+ &lt/tr&gt
+&lt/table&gt
+</code>
+</pre>
+				
+			<p>That displays like this:</p>
+			
+				<table>
+					<tr>
+					   <th>CMS</th>
+					   <th>Usage</th>
+					   <th>Change Since Jan 1</th>
+					   <th>Market Share</th>
+					   <th>Change Since Jan 1</th>
+					</tr>					  
+					<tr>
+					   <td>WordPress</td>
+					   <td>25.8%</td>
+					   <td>+0.2%</td>
+					   <td>59.1%</td>
+					   <td>+0.3%</td>
+					</tr>
+					<tr>
+					  <td>Joomla</td>
+					  <td>2.8%</td>
+					  <td>No Change</td>
+					  <td>6.4%</td>
+					  <td>No Change</td>
+					</tr>
+					<tr>
+					  <td>Drupal</td>
+					  <td>2.2%</td>
+					  <td>+0.1%</td>
+					  <td>4.9%</td>
+					  <td>No Change</td>
+					</tr>
+					<tr>
+					  <td>Magento</td>
+					  <td>1.3%</td>
+					  <td>+0.1%</td>
+					  <td>2.9%</td>
+					  <td>No Change</td>
+					</tr>
+					<tr>
+					  <td>Blogger</td>
+					  <td>1.2%</td>
+					  <td>No Change</td>
+					  <td>2.7%</td>
+					  <td>No Change</td>
+					</tr>
+					<tr>
+					   <td>Totals</td>
+					   <td>33.3%</td>
+					   <td></td>
+					   <td>76%</td>
+					   <td></td>
+					</tr>
+				</table>
+			
+			
+	</section>
+	
+	<section class="main-section" id="Table_Cells">
+		<header>Table Cells</header>		
+			<p>From the discussion of the basics of any table and how to build an HTML table, we can now surmise that table cells are 
+			created with table header and table data elements. But what if our table is more complex still and certain parts need to 
+			span multiple rows or columns? Luckily, there are two attributes that can be added to the elements that make up our HTML 
+			table.</p>
+			
+			<p>First, let us tackle the issue of table cells that we would like to span multiple rows or columns. To create a table
+			cell that spans multiple columns you will need to add the column span <code>colspan="x"</code> attribute to a table data or table
+			element header element. The "x" value must be an integer and is set to "1" by default. To ensure that your table columns
+			continue to align properly, it is important that all of the column span attributes for each table row are equal.</p>
+			
+			<p>Table cells that span multiple rows is similar to how table cells span multiple columns. You will add the 
+			row span <code>rowspan="x"</code> attribute to the table row element. The "x" is again an integer and is set to 1 by default.
+			To properly align your table data with a row spanning multiple rows, reduce the number of table data entries in "x-1"
+			subsequent table row elements by one.</p>
+	</section>
+	
+	<section class="main-section" id="Add_Structure_to_a_HTML_Table">
+		<header>Add Structure to a HTML Table</header>		
+			<p>While learning to construct an HTML document you have learned that the semantic structure of your document is as
+			important as the content itself. Having a semantically organized HTML document aids you in organizing your content, aids
+			anyone who may need to modify or update your document in the future, and aids search engines in categorizing and finding  
+			your content. An HTML table is an excellent way to present complex data for analysis and will benefit from 
+			appropriate semantic structure as well. To this end HTML tables have three special elements that semantically structure your
+			table. These elements are:</p>
+
+			<ul>
+				<li>The table head <code>thead</code> element groups the header content of an HTML table. It must be a direct descendent
+				of the table element and comes before any table row elements.</li>
+				<li>The table body <code>tbody</code> element contains the content data your table is presenting, much as the body element
+				contains the content of an HTML document. It must be a direct descendent of the table element and is placed after the
+				table header element.</li>
+				<li>The table footer <code>tfoot</code> element contains the summary content of the tabular data presented in the table
+				body. It must the a direct descendent of the table element and come after the table header element. The table footer 
+				element may be placed before or after the table body element in the HTML but will always be displayed to the user
+				<em>after</em> the table body content.</li>
+			</ul>
+	</section>
+	
+	<section class="main-section" id="Caption_and_Comment_a_HTML_Table">
+		<header>Caption and Comment a HTML Table</header>		
+			<p>Now that we can construct a proper HTML table and organize it well we can examine additional ways to aid our users in 
+			understanding the data presented. One item our table lacks is a caption describing the contents of the table. This can 
+			easily be accomplished with a header element. However, our goal is to aid <strong>all</strong> users, including those using
+			assistive technologies. Luckily HTML tables have the <code>caption</code> element we can insert within the table tags. The 
+			caption element is inserted as the first descendent of the parent table element.</p>
+
+			<p>Your table data may come from an external source that needs attribution or you may want to provide context for your
+			table data with explanations. Since there is currently no special element we can use to accomplish this commentary 
+			we will need to be creative. Within the table footer element we can add an additional table row element that spans the
+			the total width of the table using the colspan attribute.</p>
+			
+			<p>Putting everything together we can now create a very informative table like this:</p>
+			
+
+<pre>
+<code class="example">
+&lttable&gt
+ &ltcaption&gtMost Popular Content Management Systems&lt/caption&gt
+ &ltthead&gt
+  &lttr&gt
+   &ltth&gtCMS&lt/th&gt
+   &ltth&gtUsage&lt/th&gt
+   &ltth&gtChange Since Jan 1&lt/th&gt
+   &ltth&gtMarket Share&lt/th&gt
+   &ltth&gtChange Since Jan 1&lt/th&gt
+  &lt/tr&gt
+ &lt/thead&gt
+ &lttfoot&gt
+  &lttr&gt
+   &lttd&gtTotals&lt/td&gt
+   &lttd&gt33.3%&lt/td&gt
+   &lttd&gt&lt/td&gt
+   &lttd&gt76%&lt/td&gt
+   &lttd&gt&lt/td&gt
+  &lt/tr&gt
+  &lttr&gt 
+   &lttd colspan="5"&gt
+    * &ltstrong&gtUsage&lt/strong&gt is percentage
+    of surveyed websites that use the associated CMS. 
+    &ltstrong&gtMarket Share&lt/strong&gt is the 
+    percentage of surveyed websites powered by a CMS 
+    that use the associated CMS. For example, 25.8% 
+    of all surveyed websites use WordPress, and 
+    WordPress commands 59.1% market share of the 
+    total CMS market.&lt/td&gt
+  &lt/tr&gt
+  &lttr&gt
+   &lttd colspan="5"&gtThe data in this table is 
+    provided courtesy of &lta href="http://w3techs.com"
+    target="_blank"&gtW3Techs&lt/a&gt and was captured 
+    in February 2016. To learn more about this topic 
+    visit the 
+	&lta href="http://w3techs.com/technologies/overview/content_management/all" 
+    target="_blank"&gtoverview of content management systems&lt/a&gt 
+    from W3Techs.&lt/td&gt
+  &lt/tr&gt
+ &lt/tfoot&gt
+ &lttbody&gt
+  &lttr&gt
+   &lttd&gtWordPress&lt/td&gt
+   &lttd&gt25.8%&lt/td&gt
+   &lttd&gt+0.2%&lt/td&gt
+   &lttd&gt59.1%&lt/td&gt
+   &lttd&gt+0.3%&lt/td&gt
+  &lt/tr&gt
+  &lttr&gt
+   &lttd&gtJoomla&lt/td&gt
+   &lttd&gt2.8%&lt/td&gt
+   &lttd&gtNo Change&lt/td&gt
+   &lttd&gt6.4%&lt/td&gt
+   &lttd rowspan="4"&gtNo Change&lt/td&gt
+  &lt/tr&gt
+  &lttr&gt
+   &lttd&gtDrupal&lt/td&gt
+   &lttd&gt2.2%&lt/td&gt
+   &lttd&gt+0.1%&lt/td&gt
+   &lttd&gt4.9%&lt/td&gt
+   &lt!--Deleted td element to be collapsed with rowspan--&gt
+  &lt/tr&gt
+  &lttr&gt
+   &lttd&gtMagento&lt/td&gt
+   &lttd&gt1.3%&lt/td&gt
+   &lttd&gt+0.1%&lt/td&gt
+   &lttd&gt2.9%&lt/td&gt
+   &lt!--Deleted td element to be collapsed with rowspan--&gt
+  &lt/tr&gt
+  &lttr&gt
+   &lttd&gtBlogger&lt/td&gt
+   &lttd&gt1.2%&lt/td&gt
+   &lttd&gtNo Change&lt/td&gt
+   &lttd&gt2.7%&lt/td&gt
+   &lt!--Deleted td element to be collapsed with rowspan--&gt
+  &lt/tr&gt
+ &lt/tbody&gt
+&lt/table&gt
+</code>
+</pre>
+				
+			<p>This example code will create a table that looks like this:</p>
+				
+				  <table>
+				   <caption>Most Popular Content Management Systems</caption>
+				   <thead>
+				    <tr>
+					 <th>CMS</th>
+					 <th>Usage</th>
+					 <th>Change Since Jan 1</th>
+					 <th>Market Share</th>
+					 <th>Change Since Jan 1</th>
+					 </tr>
+				   </thead>
+				   
+				   <tfoot>
+				    <tr>
+					 <td>Totals</td>
+					 <td>33.3%</td>
+					 <td></td>
+					 <td>76%</td>
+					 <td></td>
+					 </tr>
+					 <tr> 
+					 <td colspan="5">
+					  * <strong>Usage</strong> is percentage
+					  of surveyed websites that use the associated CMS. 
+					 <strong>Market Share</strong> is the percentage of surveyed
+					 websites powered by a CMS that use the associated CMS. For 
+					 example, 25.8% of all surveyed websites use WordPress, and 
+					 WordPress commands 59.1% market share of the total CMS 
+					 market.
+					 </td>
+					 </tr>
+					 <tr>
+					  <td colspan="5">The data in this table is provided courtesy of <a href="http://w3techs.com" target="_blank">W3Techs</a> 
+					  and was captured in February 2016. To learn more about this topic visit the 
+					  <a href="http://w3techs.com/technologies/overview/content_management/all" target="_blank">overview of content management systems</a> 
+					  from W3Techs.</td>
+					 </tr>
+					</tfoot>
+					
+					<tbody>
+					 <tr>
+					  <td>WordPress</td>
+					  <td>25.8%</td>
+					  <td>+0.2%</td>
+					  <td>59.1%</td>
+					  <td>+0.3%</td>
+					 </tr>
+					 <tr>
+					  <td>Joomla</td>
+					  <td>2.8%</td>
+					  <td>No Change</td>
+					  <td>6.4%</td>
+					  <td rowspan="4">No Change</td>
+					 </tr>
+					 <tr>
+					  <td>Drupal</td>
+					  <td>2.2%</td>
+					  <td>+0.1%</td>
+					  <td>4.9%</td>
+					  <!--Deleted td element to be collapsed with rowspan-->
+					 </tr>
+					 <tr>
+					  <td>Magento</td>
+					  <td>1.3%</td>
+					  <td>+0.1%</td>
+					  <td>2.9%</td>
+					  <!--Deleted td element to be collapsed with rowspan-->
+					 </tr>
+					 <tr>
+					  <td>Blogger</td>
+					  <td>1.2%</td>
+					  <td>No Change</td>
+					  <td>2.7%</td>
+					  <!--Deleted td element to be collapsed with rowspan-->
+					 </tr>
+					</tbody>
+				  </table>
+				
+	</section>
+	
+	<section class="main-section" id="Styling_a_HTML_Table">
+		<header>Styling a HTML Table</header>		
+			<p>Styling HTML tables used to be a tedious process since most styling was done within the table itself. Thankfully, with the
+			advent of HTML5, most of that styling is deprecated and is now done easily using CSS. General CSS is beyond the scope of
+			this tutorial but there are a few special CSS rules regarding HTML tables that will be covered here.</p>
+
+			<p>The special CSS rules for HTML tables apply when borders are added to your table. Borderless table cells can get confusing
+			quickly so it is generally best to add borders to both the table and the table cells. Adding borders to your table is done
+			by adding the border property to your table, table data, and table header elements. Adding a border to your table element
+			behaves exactly as adding a border to any other block element. However, when you add borders to your table header and 
+			table data elements, each individual cell received its own border and the table cells are separated margins on all four sides.
+			Thia may be what you want and you simply want to to control the margins around the cells or you may want to collapse
+			the individual borders for a cleaner look. This is where the following two CSS rules come in:</p>
+			
+			<ul>
+				<li>The <code>border-spacing: x y;</code> CSS rule is used to set the margins between cell borders. The 'x' value sets
+				the horizontal margins and the 'y' sets the vertical margins. Setting only one value for the rule sets the margin for all
+				sides. The values can be any valid CSS length units.</li>
+				<li>The <code>border-collapse: collapse;</code> CSS rule collapses all the table cells borders into a single border. 
+				This will overried the border-spacing rule if it is set.</li>
+			</ul>
+			
+			<p>Here is our example table with just these few lines of CSS added:</p>
+			
+<pre>
+<code>
+&ltstyle&gt
+ table {
+  border-collapse: collapse;}
+ td, th {
+  border: 1px, solid #CCC;}
+&lt/style&gt
+&lt!--HTML table code follows, removed here for brevity--&gt
+</code>
+</pre>
+			
+				  <table id="styled_table">
+				   <caption>Most Popular Content Management Systems</caption>
+				   <thead>
+				    <tr>
+					 <th>CMS</th>
+					 <th>Usage</th>
+					 <th>Change Since Jan 1</th>
+					 <th>Market Share</th>
+					 <th>Change Since Jan 1</th>
+					 </tr>
+				   </thead>
+				   
+				   <tfoot>
+				    <tr>
+					 <td>Totals</td>
+					 <td>33.3%</td>
+					 <td></td>
+					 <td>76%</td>
+					 <td></td>
+					 </tr>
+					 <tr> 
+					 <td colspan="5">
+					  * <strong>Usage</strong> is percentage
+					  of surveyed websites that use the associated CMS. 
+					 <strong>Market Share</strong> is the percentage of surveyed
+					 websites powered by a CMS that use the associated CMS. For 
+					 example, 25.8% of all surveyed websites use WordPress, and 
+					 WordPress commands 59.1% market share of the total CMS 
+					 market.
+					 </td>
+					 </tr>
+					 <tr>
+					  <td colspan="5">The data in this table is provided courtesy of <a href="http://w3techs.com" target="_blank">W3Techs</a> 
+					  and was captured in February 2016. To learn more about this topic visit the 
+					  <a href="http://w3techs.com/technologies/overview/content_management/all" target="_blank">overview of content management systems</a> 
+					  from W3Techs.</td>
+					 </tr>
+					</tfoot>
+					
+					<tbody>
+					 <tr>
+					  <td>WordPress</td>
+					  <td>25.8%</td>
+					  <td>+0.2%</td>
+					  <td>59.1%</td>
+					  <td>+0.3%</td>
+					 </tr>
+					 <tr>
+					  <td>Joomla</td>
+					  <td>2.8%</td>
+					  <td>No Change</td>
+					  <td>6.4%</td>
+					  <td rowspan="4">No Change</td>
+					 </tr>
+					 <tr>
+					  <td>Drupal</td>
+					  <td>2.2%</td>
+					  <td>+0.1%</td>
+					  <td>4.9%</td>
+					  <!--Deleted td element to be collapsed with rowspan-->
+					 </tr>
+					 <tr>
+					  <td>Magento</td>
+					  <td>1.3%</td>
+					  <td>+0.1%</td>
+					  <td>2.9%</td>
+					  <!--Deleted td element to be collapsed with rowspan-->
+					 </tr>
+					 <tr>
+					  <td>Blogger</td>
+					  <td>1.2%</td>
+					  <td>No Change</td>
+					  <td>2.7%</td>
+					  <!--Deleted td element to be collapsed with rowspan-->
+					 </tr>
+					</tbody>
+				  </table>			
+	</section>
+	
+	<section class="main-section" id="HTML_Tables_vs_CSS_Tables">
+		<header>HTML Tables vs CSS Tables</header>		
+			<p>In the early days of website design it was common to use HTML tables as a layout device. With the advent of CSS and
+			modern browsers using agreed upon standards this layout is now obsolete. So why do HTML tables exist at all anymore?
+			Wouldn't it be simpler to use CSS tables for everything? Simply put, HTML tables are particularly good at creating a
+			logical, heirarchical structure to present complex data sets. CSS tables are a presentation device to position lists or
+			other content next to each other in columns. To summarize, use CSS tables to present content to your users in columns and
+			use HTML tables when you have complex data sets that needs a strong, logical structure to be useful.</p>		
+	</section>
+	
+	<section class="main-section" id="References">
+		<header>References</header>		
+		<ul>
+			<li>Much of the structure and information in this page is taken from 
+			 <a href="https://html.com/tables/tutorial/" target="_blank">HTML.com</a></li>
+			 
+			<li><a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">w3schools.com</a> is another great resource</li>
+		</ul>	
+	</section>
+
+</main>
+
+</body>

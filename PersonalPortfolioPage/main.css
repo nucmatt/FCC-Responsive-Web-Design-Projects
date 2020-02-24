@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Leckerli+One|Fira+Sans');
+
+
+body {
+	font-family: 'Fira Sans', 'Open Sans', sans-serif;
+	min-width: 300px;
+	font-size: 112.5%;
+	margin: 0;
+	background: #F7F7F7;
+}
+
+.header-wrap {
+	width: 100%;
+	min-width: 300px;
+	height: 4em;
+	position: fixed;
+	background: #E6F2FF;
+	z-index: 10;
+}
+
+header {
+	position: relative;
+	height: 4em;
+}
+
+#logo {
+	font-family: 'Leckerli One';
+	width: 45%;
+	margin: 0 0 0 .1em;
+	line-height: 4em;
+	display: block;
+	float: left;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.wrapper {
+	position: relative;
+	width: 94%;
+	margin: 0 auto;
+}
+
+.wrapper p {
+	text-align: left;
+	margin: 1em;
+	font-size: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+h1 {
+	font-size:2em; 
+	margin:0 auto;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size:1.5em; 
+	margin:.83em 0;
+}
+
+h3 {
+	font-size:1.17em; 
+	margin:1em 0;
+}
+
+h4 {
+	font-size:1em; 
+	margin:1.33em 0;
+}
+
+h5 {
+	font-size:.83em; 
+	margin:1.67em 0;
+}
+
+h6 {
+	font-size:.67em; 
+	margin:2.33em 0;
+}
+
+p { 
+	margin:1em auto;  
+	line-height:1.5em;  
+	font-size:1.125em;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 1em 0;
+}
+
+li {
+	line-height: 1.5em;
+}
+
+img {
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+}
+
+i {
+	color: black;
+	margin: .5em;
+}
+
+nav, nav ul {	
+	height: 4em;
+	position: relative;	
+}
+
+nav ul li {
+	width: 33%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	line-height: 4em;
+	float: left;
+}
+
+nav ul li a {
+	text-transform: uppercase;
+	color: black;	
+}
+
+#navbar {
+	width: 50%;
+	float: right;	
+	text-align: center;
+}
+
+section {
+	text-align: center;
+}
+
+.title h1, .title h2 {
+	margin: 1em 1em 0;
+}
+
+.title h2 {
+	font-size: 1.125em;
+	font-weight: normal;
+}
+
+#welcome-section {
+	background: #E6F2FF;
+	min-height: 55vh;
+	padding-top: 45vh;
+}
+
+#projects {
+}
+
+.project-tile {
+	text-decoration: none;
+	display: inline-block;
+	border: 2px solid black;
+	height: auto;
+	max-width: 300px;
+	margin: 1em .11em;
+}
+
+.project-pic {
+	height: 200px;
+	width: 300px;
+	border-bottom: 2px solid black;
+}
+
+.project-title {
+	font-family: 'Open Sans', sans;
+	font-size: .9em;
+	margin: .3em 0;
+}
+
+#contact-me ul li {
+	display: inline-block;
+}
+
+@media only screen and (max-width: 480px) {
+	#logo {
+		display: none;
+	}
+	
+	#navbar {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 660px) {
+	body {
+		font-size: 100%
+	}
+	
+	.project-tile {
+		margin: 1em;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	body {
+		font-size: 125%;
+		max-width: 1020px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.header-wrap {
+		max-width: 1020px;
+	}
+}

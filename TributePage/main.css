@@ -1,0 +1,59 @@
+body { background-color: #fbf0d9;
+    color: #5f4b32;
+    text-align: center;
+    font-size: medium;
+    font-family: "Open Sans", sans-serif;}
+    
+h1, h2, h3 { font-family: "Libre Franklin", sans-serif;}
+    
+h1 { font-size: 220%;}
+
+h2 { font-size: 170%;}
+
+h3 { font-size: 130%;
+  font-weight: normal;}
+  
+img { max-width: 100%;
+   display: block;
+   height: auto;
+   margin: auto; }
+   
+#img-div {margin: -5px;
+       margin-top: 20px;
+       width: 100%;}			
+
+#main{ margin: 30px auto;
+    padding: 15px;
+    border: 0px solid;
+    border-radius: 5px;
+    }
+
+#title {}
+
+#preamble {font-size: 110%; }
+
+#img-caption {margin: 20px;
+           margin-top: 5px;
+           font-size: 110%;}
+
+#tribute-info { width: 50%;
+             margin: auto;
+             display: grid;
+             grid-template-columns: auto 1fr;
+             grid-template-rows: repeat(auto-fill, minmax (60px, 1fr));
+             grid-gap: 10px;
+             }
+             
+#summary { display: block;}
+
+#tribute-link {}
+
+.date { text-align: center;
+     font-weight: bold;
+     }
+
+.event { text-align: justify;
+     }
+     
+blockquote { font-style: italic;
+          font-size: 105%;}

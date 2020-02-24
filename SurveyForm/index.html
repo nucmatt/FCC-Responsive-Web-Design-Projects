@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	
+	<link href="main.css" type="text/css" rel="stylesheet">
+	
+	<title>My FCC Survey Form</title>
+	
+</head>
+
+<body>
+
+	<h1 id="title">Warhammer 40K Tournament Survey Form</h1>
+	
+	<div id="form-box">
+	
+	<p id="description">Registration is now open! Please fill out the form below to register.</p>
+	
+	<form id="survey-form" action="40k_tournament_entries.php" method="post">
+	
+		<label id="name-label" for="Name">*Name: </label>
+		
+		<input id="name" required type="text" name="Name" placeholder="ex: Ezekyle Abaddon">
+		
+		<label id="email-label" for="Email">*Email: </label>
+		
+		<input id="email" required type="email" name="Email" placeholder="ex: Warmaster@chaos.net">
+		
+		<fieldset>
+			<legend>How would you prefer to play your games?</legend>
+			<label> <input type="radio" name="playstyle" value="1">Tournament Scoring </label><br>
+			<label> <input type="radio" name="playstyle" value="2">Casual </label><br>
+			<label> <input type="radio" name="playstyle" value="3">Either, the Grimdark knows only WAR!!!</label><br>
+			</fieldset>
+			
+		<label for="Side">Choose your side:</label>
+		
+		<select id="dropdown" name="Side">
+			<option value="" selected="selected">Select One</option>
+			<option value="Chaos">Chaos</option>
+			<option value="Imperium">Imperium</option>
+			<option value="Xenos">Xenos</option>
+			</select>
+		
+		<fieldset class="checkboxes">
+			<legend>Which faction(s) will your army contain?</legend>
+		
+			<label> <input type="checkbox" name="army" value="1">Space Marines (any chapter)</label><br> 
+			<label> <input type="checkbox" name="army" value="2">Astra Militarum</label><br>
+			<label> <input type="checkbox" name="army" value="3">Adeptus Mechanicus</label><br>
+			<label> <input type="checkbox" name="army" value="4">Imperium Miscellany</label><br>
+			<label> <input type="checkbox" name="army" value="5">Chaos Space Marines</label><br>
+			<label> <input type="checkbox" name="army" value="6">Chaos Daemons</label><br>
+			<label> <input type="checkbox" name="army" value="7">Aeldari (including Drukhari)</label><br>
+			<label> <input type="checkbox" name="army" value="8">Tyranids</label><br>
+			<label> <input type="checkbox" name="army" value="9">Orks</label><br>
+			<label> <input type="checkbox" name="army" value="10">Necrons</label><br>
+			<label> <input type="checkbox" name="army" value="11">Tau Empire</label><br>
+			</fieldset>
+			
+		<label id="number-label" for="Points">What size army will you deploy?</label>
+														
+		<input id="number" type="number" min="500" max="2000" placeholder="Army point total (500-2000pts)">
+				
+		<label for="comments">Any Comments or Suggestions?</label>
+		
+		<textarea name="comments" maxlength="500" placeholder="500 characters max"></textarea>
+			
+		<button id="submit" type="submit">Submit Entry</button>
+	
+	</form>
+	
+	</div>
+
+</body>

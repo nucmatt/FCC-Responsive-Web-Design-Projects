@@ -1,0 +1,56 @@
+body {text-align: center;
+    background-color: #0D407F;
+    color: #FFFFFF;
+    font-size: medium;
+    font-family: Garamond, serif;}
+    
+h1 {font-family: Helvetica, sans-serif;}
+    
+#form-box {background-color: #231F20;
+         margin: 0 auto;
+         border-radius: 5px;
+         width: 75%;
+         max-width: 50em;
+         min-width: 28em;
+         height: auto;}
+
+#title {}
+
+#description {padding: 1em;}
+
+#survey-form {display: grid;
+            grid-template-columns: auto 1fr;
+            grid-auto-flow: row;
+            grid-gap: .8em .5em;}
+                       
+#survey-form fieldset {grid-column: span 2;}
+
+#survey-form button {grid-column: span 2;
+                   width: 25%;
+                   justify-self: center;}
+
+#name {width: 50%;}
+
+#email {width: 50%;}
+
+#number {width: 50%;}
+
+#name-label {}
+
+#email-label {}
+
+#number-label {}
+
+#dropdown {width: 50%;}
+
+textarea {min-height: 3em;
+        margin-right: 1em;}
+
+#submit {margin: 1.5em;}
+      
+fieldset {margin: auto 1em;
+        padding: 1em;
+        text-align: left;}
+
+label {margin: auto 1em;
+     text-align: right;}
